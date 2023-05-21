@@ -1,8 +1,12 @@
 <div class="panel panel-primary">
     <div class="panel-heading">
-      <h2>Employee List</h2>
+      <div class="form-inline justify-content-end mb-3">
+        <input type="text" class="form-control mr-2" [(ngModel)]="searchText" placeholder="Search employees">
+        <button class="btn btn-primary" (click)="filterEmployees()">Search</button>
+      </div>
     </div>
     <div class="panel-body">
+      <div style="max-height: 400px; overflow-y: auto;">
       <table class="table table-striped">
         <thead>
           <tr>
@@ -25,5 +29,6 @@
           </tr>
         </tbody>
       </table>
+      </div>
     </div>
   </div>
